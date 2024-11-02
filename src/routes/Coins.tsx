@@ -18,8 +18,9 @@ const Header = styled.header`
 `;
 const CoinList = styled.ul``;
 const Coin = styled.li`
-  background-color: whitesmoke;
-  color: ${(props) => props.theme.textColor};
+display: flex;
+  background-color: white;
+  color: black;
 
   border-radius: 15px;
   margin-bottom: 10px;
@@ -38,7 +39,7 @@ const Coin = styled.li`
 
 const Title = styled.h1`
   font-size: 48px;
-  color: ${(props) => props.theme.accentColor};
+  color: ${(props) => props.theme.textColor};
 `;
 
 const Loader = styled.span`

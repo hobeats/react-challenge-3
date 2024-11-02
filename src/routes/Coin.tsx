@@ -16,7 +16,7 @@ import { fetchCoinInfo, fetchCoinTickers } from "../api";
 
 const Title = styled.h1`
   font-size: 48px;
-  color: ${(props) => props.theme.accentColor};
+  color: ${(props) => props.theme.textColor};
 `;
 
 const Loader = styled.span`
@@ -40,7 +40,8 @@ const Header = styled.header`
 const Overview = styled.div`
   display: flex;
   justify-content: space-between;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: white;
+  color: black;
   padding: 10px 20px;
   border-radius: 10px;
 `;
@@ -75,11 +76,11 @@ const Tab = styled.span<{ isActive: boolean }>`
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 400;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: white;
   padding: 7px 0px;
   border-radius: 10px;
   color: ${(props) =>
-    props.isActive ? props.theme.accentColor : props.theme.textColor};
+    props.isActive ? props.theme.accentColor : "#000000"};
   a {
     display: block;
   }
@@ -161,7 +162,7 @@ function Coin() {
   const loading = infoLoading || tickersLoading;
   return (
     <Container>
-      <Back><Link to="/">BACK</Link></Back>
+      <Back><Link to="/">&larr; BACK</Link></Back>
       
       <Header>
       

@@ -50,10 +50,9 @@ function Price({ coinId }: PriceProps) {
         "Loading..."
       ) : (
         <>
-        <div>Rank : {tickersData?.rank}</div>
         <div>First Data at : {tickersData?.first_data_at}</div>
         <div>ATH DATE : {tickersData?.quotes.USD.ath_date}</div>
-        <div>ATH DATE : $ {tickersData?.quotes.USD.ath_price.toFixed(2)}</div>
+        <div>ATH Price : $ {tickersData?.quotes.USD.ath_price.toFixed(2)}</div>
         <div>Price : $ {tickersData?.quotes.USD.price.toFixed(2)}</div>
         <div>Percent Change 15m : {tickersData?.quotes.USD.percent_change_15m} %</div>
         <div>Percent Change 1h : {tickersData?.quotes.USD.percent_change_1h} %</div>
