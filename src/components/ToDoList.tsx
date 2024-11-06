@@ -1,6 +1,6 @@
 import { useRecoilState, useRecoilValue } from "recoil";
 import CreateToDo from "./CreateToDo";
-import { Categories, ToDoState, categoryState, toDoSelector } from "../atoms";
+import {ToDoState, categoryState, toDoSelector } from "../atoms";
 import ToDo from "./ToDo";
 import userEvent from "@testing-library/user-event";
 import AddCat from "./AddCat";
@@ -25,9 +25,9 @@ function ToDoList() {
         }}
       >
         <select style={{ height: 21 }} onInput={onInput}>
-          <option value={Categories.TO_DO}>TO DO</option>
-          <option value={Categories.DOING}>DOING</option>
-          <option value={Categories.DONE}>DONE</option>
+          <option value="TO_DO">TO DO</option>
+          <option value="DOING">DOING</option>
+          <option value="DONE">DONE</option>
         </select>
         <CreateToDo />
       </div>
