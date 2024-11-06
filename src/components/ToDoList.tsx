@@ -3,6 +3,7 @@ import CreateToDo from "./CreateToDo";
 import { Categories, ToDoState, categoryState, toDoSelector } from "../atoms";
 import ToDo from "./ToDo";
 import userEvent from "@testing-library/user-event";
+import AddCat from "./AddCat";
 
 function ToDoList() {
   const toDos = useRecoilValue(toDoSelector);
@@ -13,6 +14,7 @@ function ToDoList() {
   return (
     <div>
       <h1>TO DOs</h1>
+      <AddCat/>
       <hr />
       <div
         style={{
